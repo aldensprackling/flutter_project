@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_final_project/sign_in_screen.dart';
+import 'package:flutter_final_project/sign_up_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,11 +11,23 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Yo!'),
-        ),
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
+
+      /* Once authentication is implemented
+        
+        TODO: If user != null -> HomeScreen() 
+               Else -> SignInScreen() 
+      */
+      home: PageView(
+        scrollDirection: Axis.vertical,
+        children: const [
+          SignInScreen(),
+          SignUpScreen(),
+        ],
       ),
     );
   }
