@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_final_project/sign_in_screen.dart';
 import 'package:flutter_final_project/sign_up_screen.dart';
-
+import 'package:flutter_final_project/profile_screen.dart';
+import 'package:flutter_final_project/edit_profile_screen.dart';
 void main() {
   runApp(const MainApp());
 }
@@ -27,6 +28,8 @@ class MainApp extends StatelessWidget {
         children: const [
           SignInScreen(),
           SignUpScreen(),
+          ProfileScreen(),
+          EditProfileScreen(),
         ],
       ),
     );
